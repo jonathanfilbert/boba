@@ -1,18 +1,17 @@
 import React from "react"
-import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
+import SEO from "../components/SEO"
 
 const Home = () => {
   return (
-    <Layout>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Jonathan Filbert - Coming Soon</title>
-        <link rel="canonical" href="http://jofil.vercel.app/" />
-      </Helmet>
-      <div className="flex  bg-black p-5 min-w-full w-full h-full min-h-screen items-center">
+    <Layout isDark>
+      <SEO
+        title="Home"
+        description="Jonathan Filbert is a student-entrepreneur who believes in the democratization of technology for everyone."
+      />
+      <div className="flex  min-w-full w-full h-full min-h-screen items-center">
         <div className="title text-white text-3xl">
-          O riddle me this.
+          <div className="subtitle">O riddle me this.</div>
           <div>What comes in two, but seen as one?</div>
         </div>
       </div>
