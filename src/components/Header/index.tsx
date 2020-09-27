@@ -11,11 +11,11 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex flex-col items-end lg:flex-row">
-        <HeaderMenu text="ABOUT" to="/about" />
-        <HeaderMenu text="PROJECTS" to="/projects" />
-        <HeaderMenu text="READS" to="/reads" />
-        <HeaderMenu text="USES" to="/uses" />
-        <HeaderMenu text="BLOG" to="/blog" />
+        <HeaderMenu text="ABOUT" to="/about" isBlack={false} />
+        <HeaderMenu text="PROJECTS" to="/projects" isBlack={false} />
+        <HeaderMenu text="READS" to="/reads" isBlack={false} />
+        <HeaderMenu text="USES" to="/uses" isBlack={false} />
+        <HeaderMenu text="BLOG" to="/blog" isBlack={false} />
       </div>
     </div>
   )

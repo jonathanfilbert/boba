@@ -1,13 +1,13 @@
 import SEO from "../../components/SEO"
 import React from "react"
-import Layout from "../../components/layout"
+import InvertedLayout from "../../components/InvertedLayout"
 
 const About = () => {
   return (
-    <Layout isDark={false}>
+    <InvertedLayout isDark={false}>
       <SEO title="About" description="About page" />
       <div>ini about</div>
-    </Layout>
+    </InvertedLayout>
   )
 }
 

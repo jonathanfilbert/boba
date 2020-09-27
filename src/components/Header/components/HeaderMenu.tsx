@@ -1,29 +1,23 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
-
-const HeaderMenuWrapper = styled.div`
-  .active {
-    background: blue;
-  }
-`
 
 type HeaderMenu = {
   text: string
   to: string
+  isBlack?: boolean
 }
 
-const HeaderMenu = ({ text, to }: HeaderMenu) => {
+const HeaderMenu = ({ text, to, isBlack = true }: HeaderMenu) => {
   return (
-    <HeaderMenuWrapper className="pt-5 lg:px-5">
-      <Link
-        to={to}
-        activeClassName="opacity-100"
-        className="opacity-50 header__menu__item color-secondary text-sm"
-      >
-        {text}
-      </Link>
-    </HeaderMenuWrapper>
+    <Link
+      to={to}
+      activeClassName="opacity-100"
+      className={`opacity-50 ${
+        isBlack ? "color-primary" : "color-secondary"
+      } text-sm sm:pt-5 lg:pt-0 lg:px-5`}
+    >
+      {text}
+    </Link>
   )
 }
 
