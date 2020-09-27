@@ -3,15 +3,8 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 const HeaderMenuWrapper = styled.div`
-  .header__menu__item {
-    color: #fafafa;
-    opacity: 0.18;
-    transition: all 0.1s;
-  }
-
-  .header__menu__item:hover {
-    opacity: 1;
-    transition: all 0.1s;
+  .active {
+    background: blue;
   }
 `
 
@@ -22,9 +15,13 @@ type HeaderMenu = {
 
 const HeaderMenu = ({ text, to }: HeaderMenu) => {
   return (
-    <HeaderMenuWrapper className="px-5">
-      <Link to={to}>
-        <div className="header__menu__item">{text}</div>
+    <HeaderMenuWrapper className="pt-5 lg:px-5">
+      <Link
+        to={to}
+        activeClassName="opacity-100"
+        className="opacity-50 header__menu__item color-secondary text-sm"
+      >
+        {text}
       </Link>
     </HeaderMenuWrapper>
   )

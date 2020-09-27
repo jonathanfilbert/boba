@@ -4,11 +4,13 @@ import { Link } from "gatsby"
 
 const Header = () => {
   return (
-    <div className="w-full flex flex-row items-center color-secondary normal font-bold justify-between">
-      <div className="title color-secondary py-10 text-xl">
-        <Link to="/">JFL</Link>
+    <div className="w-full flex flex-row items-center color-secondary normal font-bold justify-between py-8 ">
+      <div className="title color-secondary text-xl self-end">
+        <Link to="/" className="opacity-50" activeClassName="opacity-100">
+          JFL
+        </Link>
       </div>
-      <div className="flex flex-row">
+      <div className="flex flex-col items-end lg:flex-row">
         <HeaderMenu text="ABOUT" to="/about" />
         <HeaderMenu text="PROJECTS" to="/projects" />
         <HeaderMenu text="READS" to="/reads" />
