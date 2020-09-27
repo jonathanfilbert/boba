@@ -5,7 +5,7 @@ module.exports = {
     }),
     require("tailwindcss")("./tailwind.config.js"),
     require("postcss-preset-env")({
-      autoprefixer: { grid: false },
+      autoprefixer: { grid: true },
       features: {
         "nesting-rules": true,
       },
