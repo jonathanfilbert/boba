@@ -24,3 +24,66 @@
   * your stylesheet by default.
   */
 @tailwind screens;
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("../../static/fonts/WorkSans-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 800;
+}
+
+@font-face {
+  font-family: "Druk Wide";
+  src: url("../../static/fonts/Druk-Wide-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Druk Wide";
+  src: url("../../static/fonts/DrukWide-Medium.woff2") format("woff2");
+  font-weight: medium;
+  font-style: normal;
+}
+
+.title {
+  font-family: "Druk Wide";
+  font-weight: bold;
+}
+
+.subtitle {
+  font-family: "Druk Wide";
+  font-weight: normal;
+}
+
+.normal {
+  font-family: "Work Sans";
+}
+
+.bg-primary {
+  background-color: #121212;
+}
+
+.bg-secondary {
+  background-color: #fafafa;
+}
+
+.bg-tertiary {
+  background-color: #ff0002;
+}
+
+.color-primary {
+  color: #121212;
+}
+
+.color-secondary {
+  color: #fafafa;
+}
+
+.color-tertiary {
+  color: #ff0002;
+}
+
+.color-muted {
+  color: #8a8a8a;
+}

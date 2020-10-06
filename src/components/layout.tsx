@@ -1,36 +1,30 @@
 import React from "react"
-import { createGlobalStyle } from "styled-components"
+import Header from "./Header"
+import styled, { createGlobalStyle } from "styled-components"
 
-const GlobalStyles = createGlobalStyle`
-@font-face {
-  font-family: "Work Sans";
-  src: url("/fonts/WorkSans-VariableFont_wght.ttf")
-    format("truetype");
-  font-weight: 100 800;
-}
-
-@font-face {
-  font-family: "Druk Text Wide";
-  src: url("/fonts/DrukTextWide-Heavy.woff2") format("woff2"),
-    url("/fonts/DrukTextWide-Heavy.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-}
-
-.title {
-  font-family: "Druk Text Wide";
-}
-
-.subtitle {
-  font-family: "Work Sans";
-}
-
+const LayoutWrapper = styled.div`
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
 `
-const Layout = ({ children }) => (
-  <>
-    <GlobalStyles />
+const GlobalSstyles = createGlobalStyle`
+body {
+  background-color: #121212;
+}
+`
+
+type LayoutProps = {
+  isDark: boolean
+  children: any
+}
+
+const Layout = ({ children, isDark }: LayoutProps) => (
+  <LayoutWrapper>
+    <GlobalSstyles />
+    <Header />
     {children}
-  </>
+  </LayoutWrapper>
 )
 
 export default Layout
